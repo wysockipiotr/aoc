@@ -11,6 +11,7 @@ def run(day: int = typer.Option(..., min=1)):
     from aoc.day_2_password_philosophy import password_philosophy
     from aoc.day_3_toboggan_trajectory import toboggan_trajectory
     from aoc.day_4_passport_processing import passport_processing
+    from aoc.day_5_binary_boarding import binary_boarding
 
     puzzle_per_day = {
         day: puzzle
@@ -21,6 +22,7 @@ def run(day: int = typer.Option(..., min=1)):
                 password_philosophy,
                 toboggan_trajectory,
                 passport_processing,
+                binary_boarding,
             ],
         )
     }

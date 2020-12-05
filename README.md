@@ -18,3 +18,10 @@
 <b>$ poetry run</b> aoc --day DAY_NUMBER
 </code>
 </pre>
+
+###### Running tests
+<pre>
+<code>
+<b>$ poetry run</b> pytest
+</code>
+</pre>
