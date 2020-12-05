@@ -1,46 +1,16 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Final, Iterable, Set, Tuple
+from typing import Final, Iterable, Set
 
-from more_itertools import divide, first, last, one, windowed
+from more_itertools import one, windowed
 
 from aoc.utils.io import open_input
 
-NUMBER_OF_ROWS: Final = 128
-NUMBER_OF_COLUMNS: Final = 8
 FRONT: Final = "F"
 BACK: Final = "B"
 LEFT: Final = "L"
 RIGHT: Final = "R"
-
-
-def take_lower_half(rng: range) -> range:
-    items = list(first(divide(2, rng)))
-    return range(first(items), last(items) + 1)
-
-
-def take_upper_half(rng: range) -> range:
-    items = list(last(divide(2, rng)))
-    return range(first(items), last(items) + 1)
-
-
-def narrow_ranges(
-    sequence: str, row_range: range, col_range: range
-) -> Tuple[str, range, range]:
-    symbol, sequence = sequence[0], sequence[1:]
-    if symbol == FRONT:
-        row_range = take_lower_half(row_range)
-    elif symbol == BACK:
-        row_range = take_upper_half(row_range)
-    elif symbol == LEFT:
-        col_range = take_lower_half(col_range)
-    elif symbol == RIGHT:
-        col_range = take_upper_half(col_range)
-    else:
-        raise ValueError
-
-    return sequence, row_range, col_range
 
 
 @dataclass
@@ -50,15 +20,17 @@ class BoardingPass:
     seat: int
 
     @classmethod
-    def decode(cls, sequence: str) -> BoardingPass:
-        row_range = range(NUMBER_OF_ROWS)
-        col_range = range(NUMBER_OF_COLUMNS)
-        while sequence:
-            sequence, row_range, col_range = narrow_ranges(
-                sequence, row_range, col_range
-            )
-        row, column = one(row_range), one(col_range)
-        seat = row * NUMBER_OF_COLUMNS + column
+    def decode_from(cls, sequence: str) -> BoardingPass:
+        symbols_to_bits = {
+            FRONT: "0",
+            BACK: "1",
+            LEFT: "0",
+            RIGHT: "1",
+        }
+        seat_number_bits = "".join(symbols_to_bits[symbol] for symbol in sequence)
+        seat = int(seat_number_bits, base=2)
+        row = seat >> 3
+        column = seat & 7
         return cls(row, column, seat)
 
 
@@ -77,7 +49,7 @@ def run() -> None:
         lines = file.read().splitlines()
 
         # part 1
-        seats = [BoardingPass.decode(line).seat for line in lines]
+        seats = [BoardingPass.decode_from(line).seat for line in lines]
         print(max(seats))
 
         # part 2
