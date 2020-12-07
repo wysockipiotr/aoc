@@ -1,33 +1,25 @@
-from itertools import count
-
 import typer
+
+import aoc.day_1_report_repair.report_repair
+import aoc.day_2_password_philosophy.password_philosophy
+import aoc.day_3_toboggan_trajectory.toboggan_trajectory
+import aoc.day_4_passport_processing.passport_processing
+import aoc.day_5_binary_boarding.binary_boarding
+import aoc.day_6_custom_customs.custom_customs
 
 cli = typer.Typer()
 
 
 @cli.command()
 def run(day: int = typer.Option(..., min=1)):
-    from aoc.day_1_report_repair import report_repair
-    from aoc.day_2_password_philosophy import password_philosophy
-    from aoc.day_3_toboggan_trajectory import toboggan_trajectory
-    from aoc.day_4_passport_processing import passport_processing
-    from aoc.day_5_binary_boarding import binary_boarding
-
-    puzzle_per_day = {
-        day: puzzle
-        for day, puzzle in zip(
-            count(1),
-            [
-                report_repair,
-                password_philosophy,
-                toboggan_trajectory,
-                passport_processing,
-                binary_boarding,
-            ],
-        )
-    }
-
-    puzzle_per_day[day].run()  # type: ignore
+    [
+        aoc.day_1_report_repair.report_repair,
+        aoc.day_2_password_philosophy.password_philosophy,
+        aoc.day_3_toboggan_trajectory.toboggan_trajectory,
+        aoc.day_4_passport_processing.passport_processing,
+        aoc.day_5_binary_boarding.binary_boarding,
+        aoc.day_6_custom_customs.custom_customs,
+    ][day - 1].run()
 
 
 if __name__ == "__main__":
