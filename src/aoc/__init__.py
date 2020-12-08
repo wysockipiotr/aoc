@@ -7,6 +7,7 @@ import aoc.day_4_passport_processing.passport_processing
 import aoc.day_5_binary_boarding.binary_boarding
 import aoc.day_6_custom_customs.custom_customs
 import aoc.day_7_handy_haversacks.handy_haversacks
+import aoc.day_8_handheld_halting.handheld_halting
 
 cli = typer.Typer()
 
@@ -21,6 +22,7 @@ def run(day: int = typer.Option(..., min=1)):
         aoc.day_5_binary_boarding.binary_boarding,
         aoc.day_6_custom_customs.custom_customs,
         aoc.day_7_handy_haversacks.handy_haversacks,
+        aoc.day_8_handheld_halting.handheld_halting,
     ][
         day - 1
     ].run()  # type: ignore
