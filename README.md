@@ -3,6 +3,7 @@
 <h6 align="center">Advent of Code</h6>
 
 <p align="center">
+<img src="https://github.com/wysockipiotr/aoc/workflows/Tests/badge.svg?branch=main" />
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 </p>
 
