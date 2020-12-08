@@ -8,15 +8,15 @@ from aoc.utils.io import open_input
 
 @dataclass
 class Instruction:
-    opcode: str
-    argument: int
+    opcode: str = "nop"
+    argument: int = 0
 
 
 @dataclass
 class ProcessorState:
-    accumulator: int = field(default=0)
-    instruction_pointer: int = field(default=0)
-    total_executions: int = field(default=0)
+    accumulator: int = 0
+    instruction_pointer: int = 0
+    total_executions: int = 0
     executed_lines: Set[int] = field(default_factory=set)
 
     def execute(self, instruction: Instruction) -> ProcessorState:
