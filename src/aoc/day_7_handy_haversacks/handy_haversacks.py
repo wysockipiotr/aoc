@@ -35,7 +35,6 @@ def count_bags(color: str, allowed_colors: DefaultDict[str, Dict[str, int]]) -> 
     )
 
 
-
 def run():
     with open_input(__file__) as file:
         lines = file.read().splitlines()
@@ -53,12 +52,9 @@ def run():
 
         # part 1
         print(
-            sum(
-                can_contain_bag_of_color(bag, "shiny gold", lookup)
-                for bag in lookup
-            )
+            sum(can_contain_bag_of_color(bag, "shiny gold", lookup) for bag in lookup)
         )
-        
+
         # part 2
         print(count_bags("shiny gold", lookup))
 
