@@ -1,7 +1,7 @@
 from typing import List
 from pytest import fixture
 
-from aoc.day_8_handheld_halting.handheld_halting import (
+from aoc.day_08_handheld_halting.handheld_halting import (
     Instruction,
     get_state_after_first_repeated_execution,
     get_state_after_termination,

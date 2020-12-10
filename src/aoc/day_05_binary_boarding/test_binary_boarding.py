@@ -1,6 +1,6 @@
 import pytest
 
-from aoc.day_5_binary_boarding.binary_boarding import BoardingPass, get_free_seats
+from aoc.day_05_binary_boarding.binary_boarding import BoardingPass, get_free_seats
 
 
 @pytest.mark.parametrize(

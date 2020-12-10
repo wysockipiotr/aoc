@@ -2,7 +2,7 @@ from typing import List
 
 import pytest
 
-from aoc.day_9_encoding_error.encoding_error import (
+from aoc.day_09_encoding_error.encoding_error import (
     find_first_invalid_number_in,
     find_subsequence_that_sums_to,
     is_valid,
