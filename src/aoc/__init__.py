@@ -10,6 +10,7 @@ import aoc.day_6_custom_customs.custom_customs
 import aoc.day_7_handy_haversacks.handy_haversacks
 import aoc.day_8_handheld_halting.handheld_halting
 import aoc.day_9_encoding_error.encoding_error
+import aoc.day_10_adapter_array.adapter_array
 
 cli = typer.Typer()
 
@@ -23,6 +24,7 @@ TASKS: Final = [
     aoc.day_7_handy_haversacks.handy_haversacks,
     aoc.day_8_handheld_halting.handheld_halting,
     aoc.day_9_encoding_error.encoding_error,
+    aoc.day_10_adapter_array.adapter_array,
 ]
 
 
