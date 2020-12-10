@@ -78,6 +78,14 @@ python-versions = "*"
 untokenize = "*"
 
 [[package]]
+name = "expression"
+version = "0.43.0"
+description = "Practical functional programming for Python 3.8+"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
 name = "flake8"
 version = "3.8.4"
 description = "the modular source code checker: pep8 pyflakes and co"
@@ -316,7 +324,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "55e17e722a00cbcc3b578163b5523ff6b36288fe2eda48df31f5fff9a7fe130f"
+content-hash = "ea15c834916f0c3ba541ae7cb9f4178360dff56e154e7bf05a73f1b547471a7d"
 
 [metadata.files]
 appdirs = [
@@ -344,6 +352,10 @@ colorama = [
 ]
 docformatter = [
     {file = "docformatter-1.3.1.tar.gz", hash = "sha256:d8db663665becccac75737b2635a06076f2c832bf861322a7bfc512f0a9fa7e3"},
+]
+expression = [
+    {file = "Expression-0.43.0-py3-none-any.whl", hash = "sha256:4f4c80f5c54ef5d1fe51ad0b40c59f190c22d2ebea7616ac1179237e00021c93"},
+    {file = "Expression-0.43.0.tar.gz", hash = "sha256:66f676887cef3d5b1798cadfc1af997f458c28f2084790eec4aa0bfdd4f9acc9"},
 ]
 flake8 = [
     {file = "flake8-3.8.4-py2.py3-none-any.whl", hash = "sha256:749dbbd6bfd0cf1318af27bf97a14e28e5ff548ef8e5b1566ccfb25a11e7c839"},
