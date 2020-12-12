@@ -1,4 +1,5 @@
 from typing import List
+
 from pytest import fixture
 
 from aoc.day_08_handheld_halting.handheld_halting import (

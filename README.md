@@ -20,7 +20,14 @@
 3. Run the code for the daily puzzle
 <pre>
 <code>
-<b>$ poetry run</b> aoc --day DAY_NUMBER
+<b>$ poetry run</b> aoc solve --day DAY_NUMBER
+</code>
+</pre>
+
+###### Generating daily solution code
+<pre>
+<code>
+<b>$ poetry run</b> aoc create --day NEXT_DAY_NUMBER --name TASK_NAME
 </code>
 </pre>
 
