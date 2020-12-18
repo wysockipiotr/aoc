@@ -4,6 +4,9 @@
 
 <p align="center">
 <img src="https://github.com/wysockipiotr/aoc/workflows/Tests/badge.svg?branch=main" />
+<a href="https://codecov.io/gh/wysockipiotr/aoc">
+  <img src="https://codecov.io/gh/wysockipiotr/aoc/branch/main/graph/badge.svg?token=LB9U2LORRO"/>
+</a>
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 </p>
 
